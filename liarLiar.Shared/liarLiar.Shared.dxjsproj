@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ec0eb210-090c-483f-97f2-58a8b7a6af24</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <ApplicationPage>app.html</ApplicationPage>
+    <Name>Shared</Name>
+    <RootNamespace>liarLiar</RootNamespace>
+    <Links>
+      <LinkDescription>
+        <Project>968ce24f-0e6e-45a0-b0ab-c5080984dd0c</Project>
+        <Path>www</Path>
+      </LinkDescription>
+      <LinkDescription>
+        <Project>1f4837ae-809f-44e2-a1b7-2796043b0b87</Project>
+        <Path />
+      </LinkDescription>
+    </Links>
+    <ApkDexFilePackageName>com.devextreme.liarLiar.Shared</ApkDexFilePackageName>
+    <XapPackagePublisherID>{cf35111b-8019-4ec1-9232-36a6efad0791}</XapPackagePublisherID>
+    <XapPackageProductID>{f2d400e4-2f41-4889-9f63-f1558aaa499d}</XapPackageProductID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bower_components\ccv\js\ccv.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\ccv\js\face.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\dsp.js\dsp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\headtrackr\headtrackr.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\headtrackr\headtrackr.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\html5shiv\dist\html5shiv-printshiv.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\html5shiv\dist\html5shiv.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\jQuery-TubePlayer-Plugin\jQuery.tubeplayer.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\jquery.facedetection\dist\jquery.facedetection.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\jquery.facedetection\dist\jquery.facedetection.min.js.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\mathjs\dist\math.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\mathjs\dist\math.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\semaphore.js\semaphore.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\integral.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\value.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\face.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\faces.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\gdi.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\histogram.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\spectrum.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\theory.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\timeline.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="classes\waveform.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\db.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="esma\262.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\logo.png" />
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\dx.all.debug.js" />
+    <Content Include="js\localization\dx.all.de.js" />
+    <Content Include="js\localization\dx.all.ja.js" />
+    <Content Include="js\localization\dx.all.ru.js" />
+    <Content Include="js\globalize.min.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-2.1.1.min.js" />
+    <Content Include="js\knockout-3.2.0.js" />
+    <Content Include="css\dx.spa.css" />
+    <Content Include="css\dx.common.css" />
+    <Content Include="css\dx.dark.css" />
+    <Content Include="css\dx.light.css" />
+    <Content Include="css\dx.android.holo-dark.css" />
+    <Content Include="css\dx.android.holo-light.css" />
+    <Content Include="css\dx.android5.light.css" />
+    <Content Include="css\dx.ios.default.css" />
+    <Content Include="css\dx.ios7.default.css" />
+    <Content Include="css\dx.win8.black.css" />
+    <Content Include="css\dx.win8.white.css" />
+    <Content Include="css\dx.tizen.black.css" />
+    <Content Include="css\dx.tizen.white.css" />
+    <Content Include="liarLiar.shared.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\about.html" />
+    <Content Include="views\MainView.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\MainView.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\blank.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\ccv\" />
+    <Folder Include="bower_components\ccv\js\" />
+    <Folder Include="bower_components\dsp.js\" />
+    <Folder Include="bower_components\headtrackr\" />
+    <Folder Include="bower_components\html5shiv\" />
+    <Folder Include="bower_components\html5shiv\dist\" />
+    <Folder Include="bower_components\jQuery-TubePlayer-Plugin\" />
+    <Folder Include="bower_components\jquery.facedetection\" />
+    <Folder Include="bower_components\jquery.facedetection\dist\" />
+    <Folder Include="bower_components\mathjs\" />
+    <Folder Include="bower_components\mathjs\dist\" />
+    <Folder Include="bower_components\semaphore.js\" />
+    <Folder Include="css\" />
+    <Folder Include="data\" />
+    <Folder Include="images\" />
+    <Folder Include="js\" />
+    <Folder Include="js\localization\" />
+    <Folder Include="esma" />
+    <Folder Include="classes" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(GeneratedJavascript->'%(Identity)')" DestinationFiles="@(GeneratedJavascript-&gt;'%(Identity)'-&gt;'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

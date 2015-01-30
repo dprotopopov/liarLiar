@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>06d94db0-9bdd-4985-a1f7-d2cedcd46472</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <ApplicationPage>index.html</ApplicationPage>
+    <Name>TestCamera</Name>
+    <RootNamespace>TestCamera</RootNamespace>
+    <KeyApkPath>..\..\..\..\Documents\Test_Cert.p12</KeyApkPath>
+    <KeyApkAlias>tmpl</KeyApkAlias>
+    <ApkDexFilePackageName>app.id_4eae6bde63a54a14b90863b4d73459c5</ApkDexFilePackageName>
+    <Accelerometer>False</Accelerometer>
+    <Camera>True</Camera>
+    <Capture>False</Capture>
+    <Compass>False</Compass>
+    <Connection>True</Connection>
+    <Contacts>False</Contacts>
+    <Device>False</Device>
+    <Events>False</Events>
+    <File>False</File>
+    <Geolocation>False</Geolocation>
+    <Media>False</Media>
+    <Notification>False</Notification>
+    <Storage>False</Storage>
+    <WhiteList>*</WhiteList>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="index.js" />
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="css\dx.common.css" />
+    <Content Include="css\dx.android.holo-dark.css" />
+    <Content Include="css\dx.desktop.default.css" />
+    <Content Include="css\dx.ios.default.css" />
+    <Content Include="css\dx.win8.black.css" />
+    <Content Include="css\dx.win8.white.css" />
+    <Content Include="css\dx.win8.black.small.css" />
+    <Content Include="css\dx.tizen.black.css" />
+    <Content Include="css\dx.tizen.white.css" />
+    <Content Include="data\db.js" />
+    <Content Include="layouts\Navbar\NavbarLayout.css" />
+    <Content Include="layouts\Navbar\NavbarLayout.html" />
+    <Content Include="layouts\Navbar\NavbarLayout.js" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.js" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.css" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.html" />
+    <Content Include="layouts\Empty\EmptyLayout.js" />
+    <Content Include="layouts\Empty\EmptyLayout.css" />
+    <Content Include="layouts\Empty\EmptyLayout.html" />
+    <Content Include="layouts\Desktop\DesktopLayout.css" />
+    <Content Include="layouts\Desktop\DesktopLayout.html" />
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\dx.all.debug.js" />
+    <Content Include="js\dx.phonejs.js" />
+    <Content Include="js\dx.phonejs.debug.js" />
+    <Content Include="js\dx.chartjs.js" />
+    <Content Include="js\dx.chartjs.debug.js" />
+    <Content Include="js\globalize.js" />
+    <Content Include="js\globalize.min.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\knockout-2.2.1.js" />
+    <Content Include="views\home.dxview" />
+    <Content Include="views\home.css" />
+    <Content Include="views\home.js" />
+    <Content Include="views\about.html" />
+    <Content Include="app.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="data\" />
+    <Folder Include="js\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Desktop\" />
+    <Folder Include="layouts\Empty\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="layouts\SlideOut\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="Build">
+    <!--
+    <Message Text="'$(MSBuildToolsPath)'"></Message>
+    -->
+    <Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high">
+    </Message>
+    <Message Text="Copying refenecses to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" />
+    <Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high">
+    </Message>
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build">
+  </Target>
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

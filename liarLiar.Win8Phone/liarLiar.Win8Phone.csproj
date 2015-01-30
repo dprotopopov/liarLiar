@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License. 
+-->
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{968CE24F-0E6E-45A0-B0AB-C5080984DD0C}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>liarLiar.Win8Phone</RootNamespace>
+    <AssemblyName>liarLiar.Win8Phone</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>
+    </SilverlightVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>en-US</SupportedCultures>
+    <UICulture>en-US</UICulture>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>liarLiar.Win8Phone.$(Configuration).$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>liarLiar.Win8Phone.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <BackgroundAgentType />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>
+    </PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\Commands\BaseCommand.cs" />
+    <Compile Include="cordovalib\JSON\JsonHelper.cs" />
+    <Compile Include="cordovalib\BrowserMouseHelper.cs" />
+    <Compile Include="cordovalib\CommandFactory.cs" />
+    <Compile Include="cordovalib\ConfigHandler.cs" />
+    <Compile Include="cordovalib\ConsoleHelper.cs" />
+    <Compile Include="cordovalib\CordovaCommandCall.cs" />
+    <Compile Include="cordovalib\CordovaView.xaml.cs">
+      <DependentUpon>CordovaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cordovalib\IBrowserDecorator.cs" />
+    <Compile Include="cordovalib\ImageExifHelper.cs" />
+    <Compile Include="cordovalib\MimeTypeMapper.cs" />
+    <Compile Include="cordovalib\NativeExecution.cs" />
+    <Compile Include="cordovalib\OrientationHelper.cs" />
+    <Compile Include="cordovalib\PluginResult.cs" />
+    <Compile Include="cordovalib\ScriptCallback.cs" />
+    <Compile Include="cordovalib\XHRHelper.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="Plugins\org.apache.cordova.media-capture\AudioRecorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plugins\org.apache.cordova.media-capture\VideoRecorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plugins\org.apache.cordova.contacts\ContactPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plugins\org.apache.cordova.dialogs\NotificationBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="cordovalib\CordovaView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\liarLiar.Mobile\config.xml">
+      <Link>www\config.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\index.css">
+      <Link>www\index.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\index.html">
+      <Link>www\index.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\index.js">
+      <Link>www\index.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Empty\EmptyLayout.css">
+      <Link>www\layouts\Empty\EmptyLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Empty\EmptyLayout.html">
+      <Link>www\layouts\Empty\EmptyLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Empty\EmptyLayout.js">
+      <Link>www\layouts\Empty\EmptyLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Navbar\NavbarLayout.css">
+      <Link>www\layouts\Navbar\NavbarLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Navbar\NavbarLayout.html">
+      <Link>www\layouts\Navbar\NavbarLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Navbar\NavbarLayout.js">
+      <Link>www\layouts\Navbar\NavbarLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Pivot\PivotLayout.css">
+      <Link>www\layouts\Pivot\PivotLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Pivot\PivotLayout.html">
+      <Link>www\layouts\Pivot\PivotLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Pivot\PivotLayout.js">
+      <Link>www\layouts\Pivot\PivotLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Popup\PopupLayout.css">
+      <Link>www\layouts\Popup\PopupLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Popup\PopupLayout.html">
+      <Link>www\layouts\Popup\PopupLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Popup\PopupLayout.js">
+      <Link>www\layouts\Popup\PopupLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Simple\SimpleLayout.css">
+      <Link>www\layouts\Simple\SimpleLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Simple\SimpleLayout.html">
+      <Link>www\layouts\Simple\SimpleLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Simple\SimpleLayout.js">
+      <Link>www\layouts\Simple\SimpleLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\SlideOut\SlideOutLayout.css">
+      <Link>www\layouts\SlideOut\SlideOutLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\SlideOut\SlideOutLayout.html">
+      <Link>www\layouts\SlideOut\SlideOutLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\SlideOut\SlideOutLayout.js">
+      <Link>www\layouts\SlideOut\SlideOutLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Split\SplitLayout.css">
+      <Link>www\layouts\Split\SplitLayout.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Split\SplitLayout.html">
+      <Link>www\layouts\Split\SplitLayout.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\layouts\Split\SplitLayout.js">
+      <Link>www\layouts\Split\SplitLayout.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\liarLiar.config.js">
+      <Link>www\liarLiar.config.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Mobile\views\readme.txt">
+      <Link>www\views\readme.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\ccv\js\ccv.js">
+      <Link>www\bower_components\ccv\js\ccv.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\ccv\js\face.js">
+      <Link>www\bower_components\ccv\js\face.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\dsp.js\dsp.js">
+      <Link>www\bower_components\dsp.js\dsp.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\headtrackr\headtrackr.js">
+      <Link>www\bower_components\headtrackr\headtrackr.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\headtrackr\headtrackr.min.js">
+      <Link>www\bower_components\headtrackr\headtrackr.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\html5shiv\dist\html5shiv-printshiv.min.js">
+      <Link>www\bower_components\html5shiv\dist\html5shiv-printshiv.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\html5shiv\dist\html5shiv.min.js">
+      <Link>www\bower_components\html5shiv\dist\html5shiv.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\jQuery-TubePlayer-Plugin\jQuery.tubeplayer.min.js">
+      <Link>www\bower_components\jQuery-TubePlayer-Plugin\jQuery.tubeplayer.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\jquery.facedetection\dist\jquery.facedetection.min.js">
+      <Link>www\bower_components\jquery.facedetection\dist\jquery.facedetection.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\mathjs\dist\math.min.js">
+      <Link>www\bower_components\mathjs\dist\math.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\bower_components\semaphore.js\semaphore.js">
+      <Link>www\bower_components\semaphore.js\semaphore.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\face.js">
+      <Link>www\classes\face.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\faces.js">
+      <Link>www\classes\faces.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\gdi.js">
+      <Link>www\classes\gdi.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\histogram.js">
+      <Link>www\classes\histogram.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\integral.js">
+      <Link>www\classes\integral.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\spectrum.js">
+      <Link>www\classes\spectrum.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\theory.js">
+      <Link>www\classes\theory.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\timeline.js">
+      <Link>www\classes\timeline.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\value.js">
+      <Link>www\classes\value.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\classes\waveform.js">
+      <Link>www\classes\waveform.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.common.css">
+      <Link>www\css\dx.common.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.dark.css">
+      <Link>www\css\dx.dark.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.light.css">
+      <Link>www\css\dx.light.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.spa.css">
+      <Link>www\css\dx.spa.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.win8.black.css">
+      <Link>www\css\dx.win8.black.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\css\dx.win8.white.css">
+      <Link>www\css\dx.win8.white.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\data\db.js">
+      <Link>www\data\db.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\esma\262.js">
+      <Link>www\esma\262.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\images\logo.png">
+      <Link>www\images\logo.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\dx.all.debug.js">
+      <Link>www\js\dx.all.debug.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\dx.all.js">
+      <Link>www\js\dx.all.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\globalize.min.js">
+      <Link>www\js\globalize.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\jquery-1.11.1.min.js">
+      <Link>www\js\jquery-1.11.1.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\jquery-2.1.1.min.js">
+      <Link>www\js\jquery-2.1.1.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\knockout-3.2.0.js">
+      <Link>www\js\knockout-3.2.0.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\localization\dx.all.de.js">
+      <Link>www\js\localization\dx.all.de.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\localization\dx.all.ja.js">
+      <Link>www\js\localization\dx.all.ja.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\js\localization\dx.all.ru.js">
+      <Link>www\js\localization\dx.all.ru.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\liarLiar.shared.config.js">
+      <Link>www\liarLiar.shared.config.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\theory.js">
+      <Link>www\theory.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\views\about.html">
+      <Link>www\views\about.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\views\blank.html">
+      <Link>www\views\blank.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\liarLiar.Shared\views\MainView.js">
+      <Link>www\views\MainView.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config.xml" />
+    <Content Include="TileMedium.png" />
+    <Content Include="TileSmall.png" />
+    <Content Include="www\**" />
+    <Content Include="Images\appbar.back.rest.png" />
+    <Content Include="Images\appbar.close.rest.png" />
+    <Content Include="Images\appbar.feature.video.rest.png" />
+    <Content Include="Images\appbar.next.rest.png" />
+    <Content Include="Images\appbar.save.rest.png" />
+    <Content Include="Images\appbar.stop.rest.png" />
+    <Content Include="VERSION" />
+    <None Include="..\liarLiar.Shared\bower_components\jquery.facedetection\dist\jquery.facedetection.min.js.map">
+      <Link>www\bower_components\jquery.facedetection\dist\jquery.facedetection.min.js.map</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\liarLiar.Shared\bower_components\mathjs\dist\math.map">
+      <Link>www\bower_components\mathjs\dist\math.map</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\liarLiar.Shared\views\MainView.dxview">
+      <Link>www\views\MainView.dxview</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.battery-status\Battery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.camera\Camera.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.file\File.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media-capture\Capture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media-capture\AudioCaptureTask.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media-capture\AudioRecorder.xaml.cs">
+      <DependentUpon>AudioRecorder.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media-capture\VideoCaptureTask.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media-capture\VideoRecorder.xaml.cs">
+      <DependentUpon>VideoRecorder.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.console\DebugConsole.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.contacts\Contacts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.contacts\ContactsHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.contacts\ContactPicker.xaml.cs">
+      <DependentUpon>ContactPicker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.contacts\ContactPickerTask.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.device\Device.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.device-motion\Accelerometer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.device-orientation\Compass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.file-transfer\FileTransfer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.geolocation\Geolocation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.globalization\Globalization.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.inappbrowser\InAppBrowser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media\Media.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.media\AudioPlayer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.network-information\NetworkStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.dialogs\Notification.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.dialogs\NotificationBox.xaml.cs">
+      <DependentUpon>NotificationBox.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Plugins\org.apache.cordova.dialogs\notification-beep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.splashscreen\SplashScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugins\org.apache.cordova.vibration\Vibration.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Plugins\com.devexpress.plugins.devextremeaddon\DevExtremeAddon.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <PropertyGroup>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

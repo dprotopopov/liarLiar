@@ -1,0 +1,26 @@
+{
+  "name": "liarLiar",
+  "version": "0.0.0",
+  "authors": [
+    "dprotopopov <protopopov@narod.ru>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ccv": "https://github.com/liuliu/ccv.git#stable",
+    "dsp.js": "https://github.com/corbanbrook/dsp.js.git",
+    "headtrackr": "https://github.com/auduno/headtrackr.git",
+    "html5shiv": "~3.7.2",
+    "jquery.facedetection": "~2.0.1",
+    "jsfeat": "https://github.com/inspirit/jsfeat.git",
+    "mathjs": "~1.2.0",
+    "semaphore.js": "~1.0.0",
+    "jQuery-TubePlayer-Plugin": "https://github.com/nirvanatikku/jQuery-TubePlayer-Plugin.git"
+  }
+}

@@ -1,0 +1,10 @@
+<div data-options="dxView : { name: 'home', title: 'Home' } ">
+    <div class="home-view" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-bind="dxButton: { text: 'Capture Photo', clickAction: capturePhoto }"></div>
+        <div data-bind="dxButton: { text: 'Capture Editable Photo', clickAction: capturePhotoEdit }"></div>
+        <div data-bind="dxButton: { text: 'From Photo Library', clickAction: photoLibrary }"></div>
+        <div data-bind="dxButton: { text: 'From Photo Album', clickAction: photoAlbum }"></div>
+        <img style="display: none; width: 60px; height: 60px;" id="smallImage" src="" />
+        <img style="display: none;" id="largeImage" src="" />
+    </div>
+</div>

@@ -1,0 +1,218 @@
+<div data-options="dxView : { name: 'MainView', title: 'liarLiar' } ">
+    <!--<div data-options="dxContent : { targetPlaceholder: 'footer' } ">
+        <div style="position:fixed; bottom:0;" data-bind="dxNavBar: { items: [{template:'capture',text:'Capture'}, {template:'mainAndDelta',text:'Main and Delta'}, {template:'histograms',text:'Histograms'}, {template:'measures',text:'measures'}, {template:'summary',text:'Summary'}] }">
+            <div data-options="dxTemplate : { name: 'menuItem' } ">
+                This is <div data-bind="text: text"></div>
+            </div>
+        </div>
+    </div>-->
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-bind="dxPopup: popupOptions">
+            <div data-options="dxTemplate:{name: 'title'}">
+                <p><b>Source</b></p>
+            </div>
+            <div data-options="dxTemplate:{name: 'content'}">
+                <div data-bind="dxScrollView: {  }">
+                    <div data-bind="dxRadioGroup: radioGroupData"></div>
+                    <div data-bind="dxSelectBox: videoSourceOptions"></div>
+                    <div data-bind="dxSelectBox: audioSourceOptions"></div>
+                    <div data-bind="dxTextBox: videoIdOptions"></div>
+                    <div data-bind="dxTextBox: uriOptions"></div>
+                    <div class="button" data-bind="dxButton: hidePopupOptions"></div>
+                </div>
+            </div>
+        </div>
+        <div id="warningContainer" data-bind="dxToast: warningOptions"></div>
+        <div id="infoContainer" data-bind="dxToast: infoOptions"></div>
+        <div id="scrollView" data-bind="dxScrollView: {  }">
+            <div id="capture" class="dx-fieldset">
+                <div data-bind="dxToolbar: captureToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Capture</div>
+                    <div id="field" class="dx-field-value">
+                        <video id="video" style="width:50%;float:left;" autoplay muted>Your browser does not support the HTML5 video tag.</video>
+                        <div id='ytplayer' style="width:50%;float:left;"></div>
+                        <canvas id="grayscale" style="float:left;display:none;">Your browser does not support the HTML5 canvas tag.</canvas>
+                        <canvas id="spectrum" style="width:50%;float:right;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="mainAndDelta" class="dx-fieldset">
+                <div data-bind="dxToolbar: mainAndDeltaToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Main And Delta</div>
+                    <div class="dx-field-value">
+                        <canvas id="current" style="width:50%;float:left;">Your browser does not support the HTML5 canvas tag.</canvas>
+                        <canvas id="previous" style="width:50%;display:none;">Your browser does not support the HTML5 canvas tag.</canvas>
+                        <canvas id="delta" style="width:50%;">Your browser does not support the HTML5 canvas tag.</canvas>
+                        <canvas id="accumulate" style="width:50%;float:right;display:none;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="histograms" class="dx-fieldset">
+                <div data-bind="dxToolbar: histogramsToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Histogram</div>
+                    <div class="dx-field-value">
+                        <canvas id="histogram[0]" style="width:50%;float:left;">Your browser does not support the HTML5 canvas tag.</canvas>
+                        <canvas id="histogram[1]" style="width:50%;float:right;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="measures" class="dx-fieldset">
+                <div data-bind="dxToolbar: measuresToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">W</div>
+                    <div class="dx-field-value">
+                        <canvas id="waveform" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">A</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[0]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">B</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[1]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">D</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[2]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">H</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[3]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">X</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[4]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Y</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[5]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">S</div>
+                    <div class="dx-field-value">
+                        <canvas id="measure[6]" style="width:100%;height:80px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="summary" class="dx-fieldset">
+                <div data-bind="dxToolbar: summaryToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Integral</div>
+                    <div class="dx-field-value">
+                        <canvas id="integral" style="width:100%;height:160px;">Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="debug" class="dx-fieldset">
+                <div data-bind="dxToolbar: debugToolbar"></div>
+                <div class="dx-field">
+                    <div class="dx-field-label">fps</div>
+                    <div class="dx-field-value" data-bind="text: fps"></div>
+                </div>
+            </div>
+        </div>
+        <div id="summaryControl" data-bind="dxOverlay: summaryOptions">
+            <div data-bind="dxScrollView: {  }">
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-label">A</div>
+                        <div class="dx-field-value" data-bind="dxSlider: aOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">B</div>
+                        <div class="dx-field-value" data-bind="dxSlider: bOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">D</div>
+                        <div class="dx-field-value" data-bind="dxSlider: dOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">H</div>
+                        <div class="dx-field-value" data-bind="dxSlider: hOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">X</div>
+                        <div class="dx-field-value" data-bind="dxSlider: xOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">Y</div>
+                        <div class="dx-field-value" data-bind="dxSlider: yOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">S</div>
+                        <div class="dx-field-value" data-bind="dxSlider: sOptions"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">Threshold</div>
+                        <div class="dx-field-value" data-bind="dxRangeSlider: thresholdOptions"></div>
+                    </div>
+                    <div class="button" data-bind="dxButton: { text: 'Hide', clickAction: hideSummaryControl }"></div>
+                </div>
+            </div>
+        </div>
+        <div id="audioAndVideoControl" data-bind="dxOverlay: audioAndVideoOptions">
+            <div data-bind="dxScrollView: {  }">
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-label">gainGainValue</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { min:0, max: 20, step:0.1, value: gainGainValue }"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">analyserSmoothingTimeConstant</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { min:0, max: 20, step:0.1, value: analyserSmoothingTimeConstant }"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">compressorThresholdValue</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { min:-20, max: 20, step:0.1, value: compressorThresholdValue }"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">compressorRatioValue</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { value: compressorRatioValue }"></div>
+                    </div>
+                </div>
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-label">Flip horizontal</div>
+                        <div class="dx-field-value" data-bind="dxSwitch: { value: flipHorizontal }"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">Flip vertical</div>
+                        <div class="dx-field-value" data-bind="dxSwitch: { value: flipVertical }"></div>
+                    </div>
+                    <div class="button" data-bind="dxButton: { text: 'Hide', clickAction: hideAudioAndVideoControl }"></div>
+                </div>
+            </div>
+        </div>
+        <div id="mainAndDeltaControl" data-bind="dxOverlay: mainAndDeltaOptions">
+            <div data-bind="dxScrollView: {  }">
+                <div class="dx-fieldset">
+                    <div class="dx-field">
+                        <div class="dx-field-label">Sensitivity</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { min:120, max: 1024, value: sensitivity }"></div>
+                    </div>
+                    <div class="dx-field">
+                        <div class="dx-field-label">Reaction</div>
+                        <div class="dx-field-value" data-bind="dxSlider: { min:20, max: 1000, value: reaction }"></div>
+                    </div>
+                    <div class="button" data-bind="dxButton: { text: 'Hide', clickAction: hideMainAndDeltaControl }"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
