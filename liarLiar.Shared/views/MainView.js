@@ -514,12 +514,13 @@ liarLiar.MainView = function(params) {
                     timeline.draw(viewModel.measureCtx[i], i, viewModel.measure[i].width, viewModel.measure[i].height);
                 }
 
-                var weight = [viewModel.A(), viewModel.B(), viewModel.D(), viewModel.H(), viewModel.X(), viewModel.Y(), viewModel.S()];
-                (new Integral(array, weight, currentTime, viewModel.period(), viewModel.interval())).draw(viewModel.integralCtx, viewModel.integral.width, viewModel.integral.height);
-
-                var integral = value.integral(weight);
                 var startThreshold = viewModel.startThreshold();
                 var endThreshold = viewModel.endThreshold();
+                var weight = [viewModel.A(), viewModel.B(), viewModel.D(), viewModel.H(), viewModel.X(), viewModel.Y(), viewModel.S()];
+                var level = [startThreshold, endThreshold];
+                (new Integral(array, weight, level, currentTime, viewModel.period(), viewModel.interval())).draw(viewModel.integralCtx, viewModel.integral.width, viewModel.integral.height);
+
+                var integral = value.integral(weight);
                 $.each(integral, function(index, element) {
                     if (element < startThreshold || element > endThreshold) {
                         $("#warningContainer").dxToast('instance').show();

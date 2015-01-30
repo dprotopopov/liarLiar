@@ -1,9 +1,10 @@
 ﻿(function(global) {
     'use strict';
 
-    function Integral(array, weight, currentTime, period, interval) {
+    function Integral(array, weight, level, currentTime, period, interval) {
         this.array = array;
         this.weight = weight;
+        this.level = level;
         this.currentTime = currentTime;
         this.period = period;
         this.interval = interval;
@@ -15,6 +16,7 @@
         var period = this.period;
         var interval = this.interval;
         var currentTime = this.currentTime;
+        var level = this.level;
         var strokeStyle = ["red", "green", "blue", "black"];
         var array1 = [];
         for (var j = math.max(0, array.length - parseInt(period / interval)); j < array.length; j++) {
@@ -56,6 +58,14 @@
             }
             ctx.stroke();
         }
+        ctx.beginPath();
+        ctx.strokeStyle = "red";
+        for (var i = 0; i < level.length; i++) {
+            var y = height * level[i] / 512;
+            ctx.moveTo(0, y);
+            ctx.lineTo(width, y);
+        }
+        ctx.stroke();
         return this;
     };
 
